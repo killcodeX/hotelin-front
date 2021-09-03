@@ -6,6 +6,10 @@ export const CardWrapper = styled.div`
   top: 0;
   bottom: 0;
   width: 33.333%;
+
+  @media(max-width:480px){
+    width:100%;
+  }
 `;
 
 export const FormWrapper = styled.div`
