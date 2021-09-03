@@ -32,10 +32,7 @@ export const displayRazorPay = async (fulldetails, userId, history) => {
     totalAmount: fulldetails.priceDetails.totalAmount,
   };
 
-  const data = await ApiFunc.post(
-    "http://localhost:5000/hotelin/payment",
-    body
-  );
+  const data = await ApiFunc.post("hotelin/payment", body);
 
   var options = {
     key: process.env.REACT_APP_RAZORPAY_ID,
