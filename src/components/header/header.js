@@ -76,7 +76,7 @@ export default function Header() {
               style={{ backgroundColor: "#ffbf00", verticalAlign: "middle" }}
               size="large"
             >
-              {user.fname || "User"}
+              {user?.fname || "User"}
             </Avatar>
             {/* <ImageAvatar>
               <img
