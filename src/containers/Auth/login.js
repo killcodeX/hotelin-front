@@ -74,7 +74,7 @@ export default function Login() {
                 name="password"
                 hasFeedback
                 rules={[
-                  { required: true, message: "Please Select your city!" },
+                  { required: true, message: "Please enter your password!" },
                 ]}
               >
                 <Input
