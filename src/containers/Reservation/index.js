@@ -18,7 +18,7 @@ export default function Reservation() {
   }, [])
 
 
-if (Object.keys(state).length === 0) {
+if (!state || Object.keys(state).length === 0) {
     return <Loader />;
   }
 
