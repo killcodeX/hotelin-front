@@ -16,7 +16,7 @@ import { displayRazorPay } from "../../helpers/razorPayment";
 export default function PriceSummary({ hotelPrice, fulldetails }) {
   const history = useHistory()
   const auth = useSelector((state) => state.Auth.isAuthenticated);
-  const userId = useSelector((state) => state.Auth.user._id);
+  const userId = useSelector((state) => state.Auth?.user?._id);
   return (
     <CardWrapper>
       <CardHeading>Price Summary</CardHeading>
