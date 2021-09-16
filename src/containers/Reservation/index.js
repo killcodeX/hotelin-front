@@ -5,20 +5,20 @@ import BookingInfo from "./bookingInfo";
 import PriceSummary from "./priceSummary";
 import { useDispatch, useSelector } from 'react-redux';
 import { checkStorageBooking } from '../../redux/actions/actions';
+import { setBookingLocation } from '../../redux/actions/useractions';
 import Loader from "../../components/loader";
 
 export default function Reservation() {
   const dispatch = useDispatch();
   const state = useSelector(state => state.Hotels.bookingDetails)
 
-  console.log('this is state -->', state)
-
   useEffect(() => {
    dispatch(checkStorageBooking())
+   dispatch(setBookingLocation())
   }, [])
 
 
-if (!state || Object.keys(state).length === 0) {
+if (Object.keys(state).length === 0) {
     return <Loader />;
   }
 
